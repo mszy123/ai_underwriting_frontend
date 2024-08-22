@@ -1,0 +1,87 @@
+.container {
+    position: relative;
+    width: 300px; /* adjust as needed */
+    height: 300px; /* adjust as needed */
+  }
+  
+  .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .solidCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%; /* Size of the solid circle */
+    height: 80%; /* Size of the solid circle */
+    background-color: #ffffff; /* Solid circle color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    box-shadow: 0 4px 19px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .percentText {
+    font-size: 58px; /* Adjust font size as needed */
+    font-weight: bold;
+    margin-top: 0px;
+    line-height: 90%;
+    color: #000000; /* Adjust text color as needed */
+  }
+  
+  .hollowCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out; /* Smooth animation */
+    z-index: 4;
+  }
+  .grayHollowCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #DCDFEA;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all 1s ease-in-out; /* Smooth animation */
+  }
+  
+  
+  .innerCircle {
+    width: 93%; /* Adjust to control thickness */
+    height: 93%; /* Adjust to control thickness */
+    background-color: #EAEAF4; /* Background color of the inner circle */
+    border-radius: 50%;
+    z-index: 3;
+  }
+
+  .innerCircle1 {
+    width: 98%; /* Adjust to control thickness */
+    height: 98%; /* Adjust to control thickness */
+    background-color: #EAEAF4; /* Background color of the inner circle */
+    border-radius: 50%;
+    z-index: 3;
+  }
+  
+  .riskAssesmentText{
+    font-size: 18px;
+    margin: 0px;
+  }

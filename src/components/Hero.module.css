@@ -1,0 +1,577 @@
+.title {
+    color: white;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.secondaryTitle {
+    color: #A6A2B8;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column; /* Ensure everything stacks vertically */
+    align-items: center; /* Center everything horizontally */
+}
+
+.fileInputContainer {
+    margin-top: 20px; /* Adjust the spacing as needed */
+    width: 100%; /* Make sure the file input takes up the appropriate width */
+    text-align: center; /* Center the file input content */
+}
+
+
+.typingText {
+    background: #A74CCF;
+    background: linear-gradient(to right, #ff0099 0%, #5d51c9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -1000%;
+    }
+
+    100% {
+        background-position: 1000%;
+    }
+}
+
+.blob {
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #3023ae 0%, #ff0099 100%);
+    box-shadow: 0 0 200px 0 rgba(255, 0, 153, 0.7), 0 0 50px 0 rgba(48, 35, 174, 0.7);
+    background-size: 200% 200%;
+    animation: ai-blob 8s, gradient 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 4;
+}
+
+.blob1 {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3E29C120;
+    animation: ai-blob 9s linear infinite;
+    animation-direction: reverse;
+    z-index: 3;
+}
+
+.blob2 {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E3117C20;
+    animation: ai-blob 10s linear infinite;
+    z-index: 2;
+}
+
+.blob3 {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7B20A820;
+    animation: ai-blob 3.5s linear infinite;
+    z-index: 1;
+}
+
+@keyframes ai-blob {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    20% {
+        border-radius: 60% 40% 40% 60% / 60% 25% 75% 40%;
+    }
+
+    40% {
+        border-radius: 70% 30% 65% 35% / 80% 45% 55% 20%;
+    }
+
+    60% {
+        border-radius: 30% 70% 70% 30% / 20% 30% 70% 80%;
+    }
+
+    80% {
+        border-radius: 40% 60% 40% 60% / 70% 55% 45% 30%;
+    }
+
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.information {
+    width: 60%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.027);
+    position: relative; /* Change from absolute to relative */
+    margin-bottom: 40px; /* Add margin below */
+    margin-top: 120px;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 0px 38px 0 rgba(243, 243, 255, 0.301);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fileInputContainer {
+    margin-top: 20px; /* Adjust the spacing as needed */
+    width: 100%; /* Make sure the file input takes up the appropriate width */
+    text-align: center; /* Center the file input content */
+    z-index: 5; /* Ensure it is on top */
+}
+
+
+.signInInstructions {
+    margin-top: 0px;
+    color: white;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.signInGoogle {
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    color: #1c193a;
+    font-weight: 600;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: "proxima-nova", Arial, Helvetica, sans-serif;
+    padding-right: 20px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.signInGoogle:hover {
+    box-shadow: 0 0 10px 5px #b100b1b3;
+    /* Adjust the color and intensity as needed */
+
+}
+
+.googleLogo {
+    width: 20px;
+    /* Adjust the size as needed */
+    height: 20px;
+    /* Adjust the size as needed */
+    margin-right: 10px;
+    /* Space between logo and text */
+}
+
+.dropzoneContainer {
+    margin-top: 0px;
+    margin-bottom: 80px;
+    padding: 20px;
+    width: 60%;
+    padding-top: 30px;
+    border: 2px dashed #ffffffb3; /* Neon color */
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: none;
+    color: #b7a8b4;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Glowing neon effect */
+    /* box-shadow: 0 0 10px #b100b1b3, 0 0 20px #b100b1b3, 0 0 30px #b100b1b3, 0 0 40px #b100b1b3; */
+}
+
+.dropzoneContainer:hover {
+    border: 2px solid #b100b1b3; /* Neon color */
+
+    box-shadow: 0 0 5px #b100b1b3, 0 0 10px #b100b1b3, 0 0 25px #b100b1b3, 0 0 40px #b100b1b3;
+}
+
+.dropzoneText {
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.fileInput {
+    display: none;
+}
+
+.fileList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fileItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: none;
+    color: #A6A2B8;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.fileName {
+    font-size: 14px;
+    color: #A6A2B8;
+    margin: 0px;
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.deleteButton:hover {
+    transform: scale(1.2);
+}
+
+.dropzoneText2{
+    margin: 0px;
+    font-size: 10px;
+}
+
+.stepText{
+    color: white;
+    margin: 0px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.circleRow {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+    color: white;
+    overflow: hidden;
+}
+
+.circle:hover,
+.selected {
+    width: 200px;
+    border-radius: 40px;
+    background-color: #007bff;
+}
+
+.circle .icon {
+    transition: margin-right 0.3s ease;
+}
+
+.circle .label {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    justify-self: center;
+    margin-left: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.circle:hover .label,
+.selected .label {
+    opacity: 1;
+    transform: translateX(0);
+    display: block;
+}
+
+.circle:hover .icon,
+.selected .icon {
+    margin-right: 10px;
+}
+
+.circleContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dashboard {
+    width: 65%;
+    height: 900px;
+    border-radius: 25px;
+    background-color: #EAEAF4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px; 
+    padding: 10px;
+}
+
+.box {
+    background-color: #EAEAF4;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box.large {
+    grid-row: span 2;
+    display: flex;
+    padding-top: 120px;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.box.wide {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.box1 {
+    background-color: none;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    padding-left: 32px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.box1Title {
+    color: #1f1d36;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.box1Subtitle {
+    color: #a6a2b8;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.box1Description {
+    color: #6e6680;
+    font-size: 14px;
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(180deg, #ff9a9e 0%, #fad0c4 100%);
+    border-radius: 20px;
+    padding: 20px;
+    width: 190px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+/* Card Hover Effect */
+.box.wide {
+    perspective: 1000px; /* Controls the 3D effect depth */
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Update CSS variables on hover */
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    --mouse-x: 0;
+    --mouse-y: 0;
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(180deg, #a1c4fd 0%, #c2e9fb 100%);
+    height: 240px;
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(180deg, #fbc2eb 0%, #a6c1ee 100%);
+    height: 260px;
+}
+
+.cardNumber {
+    color: #333;
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cardTitle {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cardDescription {
+    color: #666;
+    font-size: 14px;
+}
+
+.downloadItem {
+    background-color: #f7f7fc;
+    border-radius: 15px;
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    overflow: hidden; /* Ensure content inside the avatar does not overflow */
+}
+
+
+
+
+.itemText h3 {
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* .itemText p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+} */
+
+.itemAction {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.downloadButton {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.pauseButton {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.risk{
+    color: #1c193a;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.answer{
+    color: #1c193a;
+    font-size: 14px;
+    margin: 0;
+}
+
+.welcomeMessage{
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+}

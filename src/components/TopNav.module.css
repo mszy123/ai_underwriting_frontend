@@ -1,0 +1,112 @@
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3030306c;
+    color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    backdrop-filter: blur(22px) saturate(188%);
+    -webkit-backdrop-filter: blur(22px) saturate(188%);
+    background-color: rgba(18, 23, 31, 0.77);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    
+    position: sticky; /* Make the top navigation sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.logoInner{
+    display: flex;
+    flex-direction: column;
+}
+
+.logoInner p, .logoInner h1{
+    margin: 0px;
+    line-height: 95%;
+}
+
+.logoInner p{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.logo img {
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks li {
+    display: inline;
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: #ffa500; /* Change to any hover color you like */
+}
+
+.signInButton {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: none;
+    border: 2px solid #7c7c7c;
+    background: none;
+    color: #7c7c7c;
+    cursor: pointer;
+    font-family: "proxima-nova", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signInButton:hover {
+    background-color: none;
+    border: 2px solid #ffffff;
+    color: white;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.7); /* Purple glow effect */
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.initial {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #933a7b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
